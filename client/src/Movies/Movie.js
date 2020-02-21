@@ -27,9 +27,9 @@ export default class Movie extends React.Component {
   };
 
   //UPDATE MOVIE
-  updateMovie = e => {
-    e.preventDefault();
-    this.props.history.push(`/update-movie/${this.state.movie.id}`)
+  updateMovie = id => {
+    id.preventDefault();
+    this.props.history.push(`/update-movie/${this.props.match.params.id}`)
   }
 
   //DELETE MOVIE
